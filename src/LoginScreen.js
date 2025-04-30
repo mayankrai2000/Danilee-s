@@ -9,17 +9,20 @@ const LoginScreen = ({ navigation }) => {
       <Image source={require('../assets/logo.png')} style={styles.logo} />
       
       <TextInput
-        style={styles.input}
-        placeholder="E-mail"
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry
-      />     
+          style={styles.input}
+          placeholder="E-mail"
+          placeholderTextColor="#000"
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+
+       <TextInput
+          style={styles.input}
+          placeholder="Password"
+          placeholderTextColor="#000"
+          secureTextEntry
+        />
+    
       <TouchableOpacity>
         <Text style={styles.forgotPassword}>Forgot Password</Text>
       </TouchableOpacity>
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 15,
     marginBottom: 15,
+    color: '#000',
   },
   forgotPassword: {
     color: '#000',

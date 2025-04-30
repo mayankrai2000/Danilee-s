@@ -11,6 +11,7 @@ import NotificationsScreen from './src/NotificationsScreen';
 import InProgressScreen from './src/InProgressScreen';
 import LandingPage from './src/LandingPage';
 import AdhocBookings from './src/AdhocBookings';
+import RecurringBookingDetail from './src/RecurringBookingDetail';
 import { StatusBar } from 'react-native';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -78,6 +79,7 @@ function MainTabs() {
                       },
                       headerLeft: () => (
                         <TouchableOpacity
+                        onPress={() => navigation.navigate('RecurringBookingDetail')}
                           style={{ marginLeft: 15 }}
                         >
                           <Text style={{ 
@@ -178,6 +180,22 @@ function App() {
             component={NotificationsScreen} 
             options={{ 
               title: 'Notifications',
+              headerTitleAlign: 'center', 
+              headerStyle: {
+                
+                backgroundColor: '#A5D71E',
+              },
+              headerTintColor: '#fff', 
+              cardStyle: {
+                backgroundColor: '#A5D71E'
+              }
+            }} 
+          />
+          <Stack.Screen 
+            name="RecurringBookingDetail" 
+            component={RecurringBookingDetail} 
+            options={{ 
+              title: 'My Recurring Bookings',
               headerTitleAlign: 'center', 
               headerStyle: {
                 
